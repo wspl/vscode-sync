@@ -1,0 +1,41 @@
+{
+  // Absolute destination path on your remote server
+  // e.g. "/home/workspace/sample-project"
+  "remotePath": "/home/workspace/sample-project",
+  
+  // Whether upload file when saved
+  "uploadWhenSaved": true,
+  
+  // The protocol of synchronous
+  // Supported: SFTP
+  "syncMethod": "SFTP",
+
+  // The sftp server for connection and authorization
+  "SFTP": {
+	  // The host of your server
+	  // e.g. "127.0.0.1"
+    "host": "127.0.0.1",
+	
+	  // The listening port of your sshd
+	  // e.g. 22
+    "port": 22,
+	
+	  // Login username of your server
+	  // e.g. "akarin"
+    "username": "akarin",
+	
+	  // Login password of the user.
+    "password": "",
+    
+    // Private key of your server
+    // e.g. "/usr/akarin/.keys/1_private"
+    "privateKey": "",
+    
+    // Public key of your server
+    // e.g. "/usr/akarin/.keys/1_public"
+    "publicKey": "",
+    
+    // Passphrase of your key
+	  "passphrase": ""
+  }
+}
