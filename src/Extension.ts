@@ -4,10 +4,10 @@ import { Sync } from './Sync';
 import { SyncController } from './SyncController';
 
 export function activate(context: ExtensionContext) {
-	
-	console.log('Congratulations, your extension "sync" is now active!'); 
-	
+    
+    console.log('Congratulations, your extension "sync" is now active!'); 
+    
     const syncController = new SyncController();
-	
+    
     context.subscriptions.push(syncController);
 }
