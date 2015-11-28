@@ -113,6 +113,7 @@ export class Client implements TransportClient {
                         const lp: SyncPath = {
                             name: item.filename,
                             path: Path.join(p, item.filename).replace(/\\/g, '/'),
+                            rPath: Path.join(p, item.filename).replace(/\\/g, '/').substr(path.length),
                             dirname: path,
                             type: item.attrs.isFile() ? PathType.File : PathType.Folder
                         };
@@ -152,23 +153,12 @@ export class Client implements TransportClient {
             }
             
             this.sftp.mkdir(dirPath, {}, (err: any) => {
-                if (err) console.log(dirPath);
+                // if (err) console.log(dirPath);
                 resolve();
             })
         });
     }
-    
-    // public static async mkdirp (dirPath: string) {
-    //     const folders = dirPath.replace(/^\/+/, '').replace(/\/+$/, '').split('/');
-        
-    //     let nowFolder = '';
-        
-    //     for (let folder of folders) {
-    //         nowFolder = nowFolder + '/' + folder;
-    //         await this.mkdir(nowFolder);
-    //     }
-    // }
-    
+
     public put (localPath: string, remotePath: string, progress?: (percentage: number) => void): Promise<any> {
         return new Promise((resolve: () => void, reject: (error?: any) => void) => {
             if (!this.isConected) {

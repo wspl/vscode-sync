@@ -17,8 +17,14 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.initSync",
-        "title": "Sync init"
+        "command": "Sync.Init",
+        "title": "Sync: Init"
+      },{
+        "command": "Sync.UploadAll",
+        "title": "Sync: Upload All"
+      },{
+        "command": "Sync.DownloadAll",
+        "title": "Sync: Download All"
       }
     ]
   },

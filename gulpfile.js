@@ -16,8 +16,8 @@ gulp.task('build', function() {
       plugins: [
         'transform-es2015-modules-commonjs',
         'transform-es2015-spread'
-        ]
+      ]
     }))
-    //.pipe(sourcemaps.write('.'))
+    //.pipe(sourcemaps.write('.', { sourceRoot: 'src'}))
     .pipe(gulp.dest('out/src'));
 });

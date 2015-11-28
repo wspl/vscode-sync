@@ -18,6 +18,7 @@ export interface TransportClient {
 export interface SyncPath extends Object {
     name: string;
     path: string;
+    rPath: string;
     dirname: string;
     type: PathType;
 }

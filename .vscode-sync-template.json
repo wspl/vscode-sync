@@ -9,7 +9,15 @@
   // The protocol of synchronous
   // Supported: SFTP
   "syncMethod": "SFTP",
-
+  
+  // The files / folders will be ignore in synchronous.
+  // e.g. "/.git"
+  // e.g. "/vscode-sync.json"
+  "ignore": [
+    "/.git",
+    "/vscode-sync.json"
+  ],
+  
   // The sftp server for connection and authorization
   "SFTP": {
     // The host of your server
