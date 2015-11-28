@@ -3,10 +3,6 @@ import { window, commands, workspace, Disposable, ExtensionContext, StatusBarAli
 import { SyncController } from './SyncController';
 
 export function activate(context: ExtensionContext) {
-    
-    console.log('Congratulations, your extension "sync" is now active!'); 
-    
     SyncController.init();
-    
     context.subscriptions.push(SyncController);
 }

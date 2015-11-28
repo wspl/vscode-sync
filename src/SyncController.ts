@@ -32,7 +32,7 @@ export class SyncController {
             this.statusBarItem = window.createStatusBarItem(StatusBarAlignment.Left); 
         }
 
-        this.statusBarItem.text = `$(cloud-upload)  Sync 0.0.1`;
+        this.statusBarItem.text = `$(cloud-upload)  Sync`;
         this.statusBarItem.show();
 
         await Sync.load(Utils.pathfix(workspace.rootPath), false);

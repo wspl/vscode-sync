@@ -1,7 +1,7 @@
 {
   "name": "sync",
-  "description": "(Unavailable version) Synchroning your project to remote server. Only support SFTP now.",
-  "version": "0.0.2",
+  "description": "Synchroning your project to remote server. Only support SFTP/Upload now.",
+  "version": "0.0.3",
   "publisher": "Plutonist",
   "engines": {
     "vscode": "^0.10.1"

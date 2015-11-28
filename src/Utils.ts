@@ -103,22 +103,18 @@ export async function listFiles (rootPath: string, ignore?: Array<string>) {
 export const pathfix = (path: string): string => path.replace(/\\/g, '/');
 
 // Modified from "https://github.com/sindresorhus/strip-json-comments"
+// PS：面向 Github 编程什么的真的是不好意思了 >_<
 export function stripJsonComments (str, opts?) {
     let singleComment = 1;
     let multiComment = 2;
     
-    const stripWithoutWhitespace = () => {
-        return '';
-    }
+    const stripWithoutWhitespace = () => '';
     
-    const stripWithWhitespace = (str, start, end) => {
-        return str.slice(start, end).replace(/\S/g, ' ');
-    }
+    const stripWithWhitespace = (str, start, end) => str.slice(start, end).replace(/\S/g, ' ');
     
     opts = opts || {};
 
-    let currentChar;
-    let nextChar;
+    let currentChar, nextChar;
     let insideString: any = false;
     let insideComment: any = false;
     let offset = 0;
