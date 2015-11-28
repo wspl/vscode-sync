@@ -1,7 +1,7 @@
 {
   "name": "sync",
-  "description": "sync your project codes to remote server",
-  "version": "0.0.1",
+  "description": "(Unavailable version) Synchroning your project to remote server. Only support SFTP now.",
+  "version": "0.0.2",
   "publisher": "Plutonist",
   "engines": {
     "vscode": "^0.10.1"
@@ -10,8 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.",
-    "workspaceContains:.vscode-sync.json"
+    "*"
   ],
   "main": "./out/src/Extension",
   "contributes": {
@@ -29,17 +28,13 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+    "vscode:prepublish": "gulp build",
+    "compile": "gulp build"
   },
   "devDependencies": {
     "babel-cli": "^6.2.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.2.0",
     "babel-plugin-transform-es2015-spread": "^6.1.18",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-stage-0": "^6.1.18",
-    "babel-preset-stage-1": "^6.1.18",
-    "babel-preset-stage-2": "^6.1.18",
     "babel-preset-stage-3": "^6.1.18",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",

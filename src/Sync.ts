@@ -21,7 +21,7 @@ export class Sync {
     public static remotePath: string;
 
     public static async load (rootPath: string, isReload?: boolean) {
-        SyncController.updateStatus(isReload ? 'Reconnectring...' : 'Connectring...');
+        SyncController.updateStatus(isReload ? 'Reconnecting...' : 'Connecting...');
         try {
             this.config = <SyncConfig> await Utils.readJSON(rootPath + '/.vscode-sync.json');
             this.localPath = rootPath;
