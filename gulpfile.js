@@ -11,13 +11,7 @@ gulp.task('build', function() {
   return gulp.src('src/**/*.ts')
     //.pipe(sourcemaps.init())
     .pipe(ts(tsConfig.compilerOptions))
-    .pipe(babel({
-      presets: ['stage-3'],
-      plugins: [
-        'transform-es2015-modules-commonjs',
-        'transform-es2015-spread'
-      ]
-    }))
+    .pipe(babel())
     //.pipe(sourcemaps.write('.', { sourceRoot: 'src'}))
     .pipe(gulp.dest('out/src'));
 });
