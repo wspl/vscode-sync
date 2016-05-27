@@ -2,4 +2,5 @@
 A remote synchronous extension for Visual Studio Code.
 
 ##
-Still in progress...
+DEVELOPMENT STOPED
+(Welcome transfer)
